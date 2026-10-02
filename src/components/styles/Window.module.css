@@ -1,0 +1,84 @@
+:root {
+    --close-clr: #ff736a;
+    --maximize-clr: #17b32e;
+    --minimize-clr: #febc2e;
+}
+
+.window {
+    width: 400px;
+    height: 250px;
+
+    background-color: #fff;
+
+    box-shadow: 0 0 100px -50px rgb(75, 74, 74);
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.titlebar {
+    border-bottom: 1px solid rgb(225, 225, 225);
+    
+    position: relative;
+}
+
+.title {
+    color: rgb(32, 32, 32);
+}
+
+.buttons {
+    height: 100%;
+
+    display: flex;
+    gap: 5px;
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    --padding: 10px;
+    padding-inline: var(--padding);
+}
+
+.buttons span {
+    height: 14px;
+    aspect-ratio: 1 / 1;
+
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: calc(infinity * 1px); 
+}
+
+
+
+.close {
+    background-color: var(--close-clr);
+}
+
+.maximize {
+    background-color: var(--maximize-clr);
+}
+
+.minimize {
+    background-color: var(--minimize-clr);
+}
+
+.maximized {
+  left: 0 !important;
+  top: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  border-radius: 0;
+}  
+
+.content {
+    height: 100%;
+
+    color: rgb(173, 173, 173);
+}
